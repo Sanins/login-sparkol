@@ -27,18 +27,25 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+We are creating a static web application that will eventually be user-facing and in a production
+environment. This is a greenfield project, no code currently exists so feel free to make an
+educated decision on which language/framework/libraries to use.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+A user authentication service has recently been developed
+(https://github.com/dantame/interview-authentication-service) and this project will be the first to
+integrate with it.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The user stories we have identified so far are:
+1. As a user, I would like to be able to log in to the web application
+2. As a user, I would like to view a personalised greeting when I log in so that I know I’m
+logged in
+3. As a user, I would like to be able to log out of the application
+Rules
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+There are no rules to how you write your code and no trick questions! Treat this like you
+would treat building any production-ready application from scratch. You may use any
+programming language, libraries or framework you wish.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Please submit your project (either as a public repository or zip file) including instructions on
+how to run it. If submitting as a zip, please include your .git directory (or equivalent) so that we
+can see the commit history.
