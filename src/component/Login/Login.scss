@@ -1,0 +1,42 @@
+.login {
+    background: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 50px;
+    border-radius: 5px;
+    padding: 0px 50px 20px;
+
+    &__heading {
+        color: #2C3E50;
+    }
+
+    &__button {
+        &--submit {
+            width: 100px;
+            background: #27AE60;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 1px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+            justify-self: center;
+
+            &:hover {
+                background: #63ce90;
+            }
+        }
+    }
+
+    &__input {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        color: #2C3E50;
+        font-size: 13px;
+    }
+}
