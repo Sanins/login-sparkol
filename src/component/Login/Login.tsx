@@ -1,15 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { setAuthToken } from './../helpers/helpers'
 import './Login.scss';
-
-export function setAuthToken(token?:any) {
-	axios.defaults.headers.common['Authorization'] = '';
-	delete axios.defaults.headers.common['Authorization'];
-  
-	if (token) {
-	  axios.defaults.headers.common['Authorization'] = `${token}`;
-	}
-  }
 
 const Login: React.FC<{}> = () => {
 
@@ -21,14 +13,11 @@ const Login: React.FC<{}> = () => {
         password: 'hotdog',
 	});
 	
-	// const [isloading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState('');
 	const [loggedIn, setIsLoggedIn] =  useState(false);
 
 	const handleSubmit = (event:React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
-
-		// setIsLoading(true);
 
 		axios({
 			method: 'POST',
@@ -74,21 +63,21 @@ const Login: React.FC<{}> = () => {
 	return (
 		<>
 		{!loggedIn ?
-		<div className='login'>
-			<h2 className='login__heading'>Login</h2>
-			<form onSubmit={handleSubmit} >
-				<div>
-					<input className='login__input' placeholder='Username' id="username" name="username" type="text" onChange={updateField} value={form.username} />
-				</div>
-				<div>
-					<input className='login__input' placeholder='Password' id="password" name="password" type="text" onChange={updateField} value={form.password} />
-				</div>
-				<button className='login__button--submit' type="submit">Submit</button>
-				{isError && 
-					<p className='login__state--error'>Incorrect username or password</p> 
-				}
-			</form>
-        </div>
+			<div className='login'>
+				<h2 className='login__heading'>Login</h2>
+				<form onSubmit={handleSubmit} >
+					<div>
+						<input className='login__input' placeholder='Username' id="username" name="username" type="text" onChange={updateField} value={form.username} />
+					</div>
+					<div>
+						<input className='login__input' placeholder='Password' id="password" name="password" type="text" onChange={updateField} value={form.password} />
+					</div>
+					<button className='login__button--submit' type="submit">Submit</button>
+					{isError && 
+						<p className='login__state--error'>Incorrect username or password</p> 
+					}
+				</form>
+			</div>
 		:
 			<div>
 				<button className='login__button--submit' onClick={logout}>Log out</button>
